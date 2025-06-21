@@ -15,17 +15,20 @@ function App() {
         const el = document.getElementById(section);
         if (el) {
           const rect = el.getBoundingClientRect();
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          const offset = section === 'contact' ? 0 : 100; // only offset for non-contact sections
+          if (
+            rect.top <= window.innerHeight / 2 - offset &&
+            rect.bottom >= window.innerHeight / 2 - offset
+          ) {
             setActiveSection(section);
             break;
           }
         }
       }
     };
-
+  
     window.addEventListener('scroll', handleScroll);
-    
-    // cleanup
+  
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -168,7 +171,7 @@ I                   enjoy solving problems on LeetCode and building useful tools
             {/* Contact */}
             <Row>
               <Col lg={12}>
-                <div id="contact" className="p-3 m-4">
+                <div id="contact" className="p-3 m-4" style={{ marginBottom: "100px" }}>
                   <h2>Contact</h2>
                   <p>Email: kjasim1998@gmail.com</p>
                   <p>GitHub: <a href="https://github.com/kjasim98">kjasim98</a></p>
