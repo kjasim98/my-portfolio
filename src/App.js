@@ -92,7 +92,7 @@ function App() {
             <Navigation activeSection={activeSection} onClickSection={handleClickSection} />
           </Col>
           <Col lg={6} xs={12}>
-            <Container className={isMobile ? "mt-4 custom-row p-0 m-0" : "mt-4 custom-row"} fluid>
+            <Container className={isMobile ? "mt-4 custom-row p-0 m-0" : "mt-4 custom-row fluid"} >
               <Row style={{ marginTop: "300px" }}>
                 <Col lg={12}>
                   <div className="p-3 m-4" id="about-me">
