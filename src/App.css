@@ -6,7 +6,7 @@
 .custom-background {
   background-color: var(--custom-bg);
   color: var(--text-white);
-  font-size: small;
+  font-size: large;
 }
 h2{
   font-size: 1rem;
